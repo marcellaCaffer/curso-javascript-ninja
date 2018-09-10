@@ -1,42 +1,93 @@
-# Desafio Semana #1
+# Desafio da semana #2
+
+Nesse exercício, você está livre para escolher os nomes para suas variáveis e funções! :smile:
 
 ```js
-// Declarar uma variável chamada `myvar`, sem valor.
-?
+// Crie uma função que receba dois argumentos e retorne a soma dos mesmos.
+function somar (x,y) {
+    return x + y;
+}
 
-// Após declarada, atribua o valor 10 à variável `myvar`.
-?
+// Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
+var x = 2;
+var y = 3;
+somar = somar(x,y) + 5;
 
-// Declare uma nova variável chamada `soma`, e adicione uma instrução somando os valores 15 e 8.
-?
+// Qual o valor atualizado dessa variável?
+10
 
-// Atribua à variável `soma` todo o valor dela, somando 1, usando o operador de soma abreviado.
-?
+// Declare uma nova variável, sem valor.
+var newvar;
 
-// Atribua à variável `soma` todo o valor dela, multiplicando por 3, usando o operador de multiplicação abreviado.
-?
+/*
+Crie uma função que adicione um valor à variável criada acima, e retorne a string:
+    O valor da variável agora é VALOR.
+Onde VALOR é o novo valor da variável.
+*/
+function somaValor() {
+    newvar = 10;
+    return ' O valor da variável agora é ' + newvar;
+}
 
-// Qual é o valor da variável `soma` até aqui?
-?
+// Invoque a função criada acima.
+somaValor();
 
-// Declare uma variável chamada `souninja`, atribuindo à ela o valor booleano que representa `verdadeiro`.
-?
+// Qual o retorno da função? (Use comentários de bloco).
+/* O valor da variável agora é 10 */
 
-// Declare uma variável chamada `comida` que recebe um array com os valores 'arroz', 'feijão' e 'ovo'.
-?
+/*
+Crie uma função com as seguintes características:
+1. A função deve receber 3 argumentos;
+2. Se qualquer um dos três argumentos não estiverem preenchidos, a função deve retornar a string:
+    Preencha todos os valores corretamente!
+3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
+*/
+function recebaTres(x,y,z) {
+    if(x == undefined || y == undefined || z == undefined) {
+        return 'Preencha todos valores corretamente'
+    } else {
+        return (x*y*z) +2 ;
+    }
+}
 
-// Digite a instrução que imprime o valor de 'feijao', que está na variável `comida`.
-?
+// Invoque a função criada acima, passando só dois números como argumento.
+recebaTres(2,3);
 
-// Digite o código que verifica se a variável `soma' é igual a variável `myvar` (testando também o tipo).
-?
+// Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
+// 'Preencha todos valores corretamente'
 
-// Digite o código que verifica se a variável `myvar` é menor ou igual à variável `soma`.
-?
+// Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
+recebaTres(2,3,6);
 
-// Crie uma função chamada `divisao` que receba como parâmetro dois números, e retorne o resultado da divisão entre eles.
-?
+// Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
+// 38
 
-// Invoque a função criada acima, passando os parâmetros 10 e 2.
-?
+/*
+Crie uma função com as seguintes características:
+1. A função deve receber 3 argumentos.
+2. Se somente um argumento for passado, retorne o valor do argumento.
+3. Se dois argumentos forem passados, retorne a soma dos dois argumentos.
+4. Se todos os argumentos forem passados, retorne a soma do primeiro com o segundo, e o resultado, dividido pelo terceiro.
+5. Se nenhum argumento for passado, retorne o valor booleano `false`.
+6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
+*/
+function recebaValor(a,b,c) {
+    if(a == undefined && b == undefined && c == undefined) {
+        return false;
+    } else if(a !== undefined && b == undefined && c == undefined) {
+        return a;
+    } else if(a !== undefined && b !== undefined && c == undefined) {
+        return a + b;
+    } else if(a !== undefined && b !== undefined && c !== undefined) {
+        return (a+b)/3;
+    } else {
+        return null;
+    }
+}
+
+// Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
+recebaValor();        //false
+recebaValor(5);       //5
+recebaValor(5,3);       //8
+recebaValor(10,2,5);        //4         
 ```
